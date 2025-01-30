@@ -1,0 +1,28 @@
+/* Navbar Styles */
+.MuiAppBar-root {
+    padding: 10px 0;
+  }
+  
+  .MuiToolbar-root {
+    justify-content: space-between;
+  }
+  
+  .MuiButton-root {
+    text-transform: none;
+    color: #388e3c; /* Green color for text/icons */
+    padding: 10px 20px;
+  }
+  
+  .MuiButton-root:hover {
+    background-color: #a5eca9; /* Darker green on hover */
+  }
+  
+  /* Style for the Home Icon */
+  .MuiIconButton-root {
+    color: #388e3c; /* Green color for the icon */
+  }
+  
+  .MuiIconButton-root:hover {
+    color: #2c6e2f; /* Darker green on hover */
+  }
+  

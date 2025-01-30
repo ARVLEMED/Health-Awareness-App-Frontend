@@ -1,0 +1,25 @@
+/* Main Page Styles */
+.main-page {
+    padding: 80px 20px; /* Add top padding to ensure content is not hidden under navbar */
+    text-align: center;
+    width: 100%;
+  }
+  
+  .continuum-section {
+    background-color: #e8f5e9; /* Light background for the continuum section */
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .continuum-section img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .continuum-section h4 {
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
