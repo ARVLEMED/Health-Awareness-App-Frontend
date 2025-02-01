@@ -55,7 +55,7 @@ const SignUpPage = () => {
     try {
       setLoading(true);
       const response = await axios.post(
-        'http://localhost:5000/api/signup',
+        'https://health-awareness-app-backend-8.onrender.com/api/signup',
         { username, email, password, confirmPassword },
         { headers: { 'Content-Type': 'application/json' } }
       );

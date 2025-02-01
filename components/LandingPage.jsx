@@ -13,7 +13,7 @@ const LandingPage = () => {
 
   // Fetch a random health tip from backend
   useEffect(() => {
-    axios.get('http://localhost:5000/api/health-tips/random') // Backend API URL for random tip
+    axios.get('https://health-awareness-app-backend-8.onrender.com/api/health-tips/random') // Backend API URL for random tip
       .then((response) => {
         setHealthTip(response.data.data.tip); // Save the random tip to state
         setLoading(false); // Set loading state to false once data is fetched

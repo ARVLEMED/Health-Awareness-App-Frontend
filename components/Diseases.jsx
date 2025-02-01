@@ -3,6 +3,7 @@ import { Box, Typography, TextField, Card, CardContent, Grid } from '@mui/materi
 import Layout from './Layout';
 import Navbar from './Navbar';
 import { green } from '@mui/material/colors';
+import { getToken } from './Auth' // Make sure you have this utility
 
 const Diseases = () => {
   const [diseases, setDiseases] = useState([]);
@@ -11,8 +12,20 @@ const Diseases = () => {
 
   useEffect(() => {
     const fetchDiseases = async () => {
+      const token = getToken(); // Get JWT token from localStorage
+      if (!token) {
+        console.error('No token found, please log in!');
+        return;
+      }
+
       try {
-        const response = await fetch('http://localhost:5000/api/diseases');
+        const response = await fetch('https://health-awareness-app-backend-8.onrender.com/api/diseases', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,  // Attach the JWT token to the request
+            'Content-Type': 'application/json',
+          },
+        });
         const data = await response.json();
 
         if (data.success) {

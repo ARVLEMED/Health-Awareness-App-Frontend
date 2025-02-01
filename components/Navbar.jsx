@@ -10,9 +10,10 @@ const Navbar = () => {
 
   // Handle Logout
   const handleLogout = () => {
-    localStorage.removeItem('authToken');  // Clear session or auth token if necessary
-    navigate('/');  // Redirect to login page
+    localStorage.removeItem('access_token');  // Ensure the same key as used when storing the token
+    navigate('/');  // Redirect to the login or home page
   };
+  
 
   return (
     <AppBar position="fixed" sx={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', backdropFilter: 'blur(10px)', zIndex: 10 }}>
